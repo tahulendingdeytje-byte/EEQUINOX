@@ -1,0 +1,3765 @@
+{
+  "name": "Sistem Booking Lapangan GOR Smash — Tim 11",
+  "diagrams": [
+    {
+      "id": "afdbd20f",
+      "type": "usecase",
+      "title": "Use Case Booking GOR Smash",
+      "nodes": [
+        {
+          "id": "cfa5c90f",
+          "kind": "system",
+          "x": 130,
+          "y": 45,
+          "w": 650,
+          "h": 690,
+          "label": "Sistem Booking GOR Smash"
+        },
+        {
+          "id": "554f2bc4",
+          "kind": "actor",
+          "x": -20,
+          "y": 265,
+          "w": 75,
+          "h": 92,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "1f9dfa3c",
+          "kind": "actor",
+          "x": 850,
+          "y": 190,
+          "w": 83,
+          "h": 92,
+          "label": "Admin GOR"
+        },
+        {
+          "id": "f6c40eba",
+          "kind": "actor",
+          "x": 850,
+          "y": 505,
+          "w": 54,
+          "h": 92,
+          "label": "Pemilik"
+        },
+        {
+          "id": "2fbc9e36",
+          "kind": "actor",
+          "x": -20,
+          "y": 610,
+          "w": 93,
+          "h": 92,
+          "label": "Pemicu waktu"
+        },
+        {
+          "id": "98b0b7e0",
+          "kind": "usecase",
+          "x": 245,
+          "y": 92,
+          "w": 174,
+          "h": 50,
+          "label": "Lihat jadwal kosong"
+        },
+        {
+          "id": "028745cf",
+          "kind": "usecase",
+          "x": 500,
+          "y": 92,
+          "w": 174,
+          "h": 50,
+          "label": "Buat booking"
+        },
+        {
+          "id": "c4a397a8",
+          "kind": "usecase",
+          "x": 245,
+          "y": 220,
+          "w": 174,
+          "h": 50,
+          "label": "Unggah bukti transfer"
+        },
+        {
+          "id": "5b13d964",
+          "kind": "usecase",
+          "x": 500,
+          "y": 220,
+          "w": 174,
+          "h": 50,
+          "label": "Cek status booking"
+        },
+        {
+          "id": "d38f869d",
+          "kind": "usecase",
+          "x": 245,
+          "y": 348,
+          "w": 174,
+          "h": 60,
+          "label": "Kelola perubahan jadwal"
+        },
+        {
+          "id": "fad92cdf",
+          "kind": "usecase",
+          "x": 500,
+          "y": 348,
+          "w": 174,
+          "h": 50,
+          "label": "Catat booking telepon"
+        },
+        {
+          "id": "c1d645a7",
+          "kind": "usecase",
+          "x": 245,
+          "y": 476,
+          "w": 174,
+          "h": 50,
+          "label": "Verifikasi DP"
+        },
+        {
+          "id": "c36d3222",
+          "kind": "usecase",
+          "x": 500,
+          "y": 476,
+          "w": 174,
+          "h": 60,
+          "label": "Lihat pendapatan & jam sepi"
+        },
+        {
+          "id": "444571bb",
+          "kind": "usecase",
+          "x": 370,
+          "y": 600,
+          "w": 174,
+          "h": 60,
+          "label": "Batalkan booking tanpa DP"
+        }
+      ],
+      "edges": [
+        {
+          "id": "ab7cf16f",
+          "kind": "association",
+          "from": "554f2bc4",
+          "to": "98b0b7e0",
+          "label": ""
+        },
+        {
+          "id": "63f5de41",
+          "kind": "association",
+          "from": "554f2bc4",
+          "to": "028745cf",
+          "label": ""
+        },
+        {
+          "id": "5ef839b2",
+          "kind": "association",
+          "from": "554f2bc4",
+          "to": "c4a397a8",
+          "label": ""
+        },
+        {
+          "id": "460b4371",
+          "kind": "association",
+          "from": "554f2bc4",
+          "to": "5b13d964",
+          "label": ""
+        },
+        {
+          "id": "178fe835",
+          "kind": "association",
+          "from": "554f2bc4",
+          "to": "d38f869d",
+          "label": ""
+        },
+        {
+          "id": "58fb71fb",
+          "kind": "association",
+          "from": "1f9dfa3c",
+          "to": "fad92cdf",
+          "label": ""
+        },
+        {
+          "id": "9561dd76",
+          "kind": "association",
+          "from": "1f9dfa3c",
+          "to": "c1d645a7",
+          "label": ""
+        },
+        {
+          "id": "1c5d62ba",
+          "kind": "association",
+          "from": "f6c40eba",
+          "to": "c36d3222",
+          "label": ""
+        },
+        {
+          "id": "76bb85bf",
+          "kind": "association",
+          "from": "2fbc9e36",
+          "to": "444571bb",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {}
+    },
+    {
+      "id": "8cc447b1",
+      "type": "scenario",
+      "title": "Skenario UC-01 — Lihat jadwal kosong",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Lihat jadwal kosong",
+        "code": "UC-01",
+        "actor": "Pelanggan",
+        "description": "Lihat jadwal kosong.",
+        "pre": "Lapangan dan jam operasional tersedia.",
+        "post": "Jadwal tersedia ditampilkan.",
+        "main": [
+          {
+            "actor": "Pelanggan memilih tanggal dan durasi.",
+            "system": "Sistem menampilkan slot yang masih kosong."
+          },
+          {
+            "actor": "Pelanggan memilih slot tersedia.",
+            "system": "Sistem memastikan slot masih tersedia."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Slot tersedia?",
+            "action": "Sistem meminta pelanggan memilih slot lain."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "98b0b7e0"
+      }
+    },
+    {
+      "id": "f04a8b6b",
+      "type": "scenario",
+      "title": "Skenario UC-02 — Buat booking",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Buat booking",
+        "code": "UC-02",
+        "actor": "Pelanggan",
+        "description": "Buat booking.",
+        "pre": "Slot tersedia.",
+        "post": "Booking tersimpan dengan status menunggu DP.",
+        "main": [
+          {
+            "actor": "Pelanggan memilih lapangan, tanggal, jam, dan durasi.",
+            "system": "Sistem memeriksa benturan jadwal."
+          },
+          {
+            "actor": "Pelanggan mengirim data nama dan nomor telepon.",
+            "system": "Sistem menghitung biaya dan DP 50%."
+          },
+          {
+            "actor": "Pelanggan mengonfirmasi booking.",
+            "system": "Sistem menyimpan booking dengan tenggat DP dua jam dan membuat kode."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Slot bebas?",
+            "action": "Sistem menolak jadwal yang bentrok."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "028745cf"
+      }
+    },
+    {
+      "id": "a93b2d9a",
+      "type": "scenario",
+      "title": "Skenario UC-03 — Unggah bukti transfer",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Unggah bukti transfer",
+        "code": "UC-03",
+        "actor": "Pelanggan",
+        "description": "Unggah bukti transfer.",
+        "pre": "Booking menunggu DP dan tenggat belum lewat.",
+        "post": "Bukti tersimpan dan status menunggu verifikasi.",
+        "main": [
+          {
+            "actor": "Pelanggan memasukkan kode booking.",
+            "system": "Sistem menampilkan jumlah DP dan tenggat."
+          },
+          {
+            "actor": "Pelanggan mengunggah bukti transfer.",
+            "system": "Sistem memeriksa tenggat dan menyimpan bukti untuk verifikasi admin."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Bukti valid dan tenggat berlaku?",
+            "action": "Sistem menjelaskan berkas tidak sesuai atau tenggat sudah lewat."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "c4a397a8"
+      }
+    },
+    {
+      "id": "1bf05abd",
+      "type": "scenario",
+      "title": "Skenario UC-04 — Cek status booking",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Cek status booking",
+        "code": "UC-04",
+        "actor": "Pelanggan",
+        "description": "Cek status booking.",
+        "pre": "Pelanggan memiliki kode booking.",
+        "post": "Status dan rincian booking ditampilkan.",
+        "main": [
+          {
+            "actor": "Pelanggan memasukkan kode booking.",
+            "system": "Sistem mencari data booking."
+          },
+          {
+            "actor": "Pelanggan meminta rincian status.",
+            "system": "Sistem menampilkan jadwal, biaya, dan status booking."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Booking ditemukan?",
+            "action": "Sistem memberi tahu pelanggan bahwa booking tidak ditemukan."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "5b13d964"
+      }
+    },
+    {
+      "id": "c8460d28",
+      "type": "scenario",
+      "title": "Skenario UC-05 — Kelola perubahan jadwal",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Kelola perubahan jadwal",
+        "code": "UC-05",
+        "actor": "Pelanggan",
+        "description": "Kelola perubahan jadwal.",
+        "pre": "Booking sudah terkonfirmasi.",
+        "post": "Booking berpindah satu kali atau dibatalkan sesuai aturan.",
+        "main": [
+          {
+            "actor": "Pelanggan meminta pindah jadwal lebih dari 24 jam sebelum bermain.",
+            "system": "Sistem memeriksa aturan dan jatah pindah satu kali."
+          },
+          {
+            "actor": "Pelanggan memilih slot baru yang tersedia.",
+            "system": "Sistem menyimpan perubahan jadwal satu kali."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Permintaan kurang dari 24 jam?",
+            "action": "Sistem membatalkan booking dan mencatat DP hangus."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "d38f869d"
+      }
+    },
+    {
+      "id": "7825f3c3",
+      "type": "scenario",
+      "title": "Skenario UC-06 — Catat booking telepon",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Catat booking telepon",
+        "code": "UC-06",
+        "actor": "Admin GOR",
+        "description": "Catat booking telepon.",
+        "pre": "Admin sudah masuk.",
+        "post": "Booking telepon tersimpan dan muncul pada jadwal bersama.",
+        "main": [
+          {
+            "actor": "Admin memasukkan data pelanggan dan slot telepon.",
+            "system": "Sistem memeriksa ketersediaan lapangan."
+          },
+          {
+            "actor": "Admin mengonfirmasi rincian booking.",
+            "system": "Sistem menghitung DP 50% dan tenggat dua jam."
+          },
+          {
+            "actor": "Admin menyimpan booking telepon.",
+            "system": "Sistem membuat booking dan menampilkan kode."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Slot tersedia?",
+            "action": "Sistem menolak jadwal yang bentrok."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "fad92cdf"
+      }
+    },
+    {
+      "id": "f85c0260",
+      "type": "scenario",
+      "title": "Skenario UC-07 — Verifikasi DP",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Verifikasi DP",
+        "code": "UC-07",
+        "actor": "Admin GOR",
+        "description": "Verifikasi DP.",
+        "pre": "Pelanggan sudah mengunggah bukti transfer.",
+        "post": "Booking terkonfirmasi setelah bukti disetujui.",
+        "main": [
+          {
+            "actor": "Admin membuka bukti transfer booking.",
+            "system": "Sistem menampilkan bukti dan rincian booking."
+          },
+          {
+            "actor": "Admin mengonfirmasi pembayaran DP.",
+            "system": "Sistem mengubah status menjadi terkonfirmasi."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Bukti sesuai?",
+            "action": "Admin menindaklanjuti bukti yang belum sesuai."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "c1d645a7"
+      }
+    },
+    {
+      "id": "eef11bb5",
+      "type": "scenario",
+      "title": "Skenario UC-08 — Lihat pendapatan dan jam sepi",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Lihat pendapatan dan jam sepi",
+        "code": "UC-08",
+        "actor": "Pemilik",
+        "description": "Lihat pendapatan dan jam sepi.",
+        "pre": "Data booking dan pembayaran tersedia.",
+        "post": "Ringkasan periode dan jam sepi ditampilkan.",
+        "main": [
+          {
+            "actor": "Pemilik memilih laporan harian atau bulanan.",
+            "system": "Sistem mengambil data booking dan pembayaran pada periode itu."
+          },
+          {
+            "actor": "Pemilik meminta ringkasan jam sepi.",
+            "system": "Sistem menghitung pendapatan dan pemakaian per jam."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "Data tersedia?",
+            "action": "Sistem menampilkan laporan dengan nilai nol."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "c36d3222"
+      }
+    },
+    {
+      "id": "cc7a5f5c",
+      "type": "scenario",
+      "title": "Skenario UC-09 — Batalkan booking tanpa DP",
+      "nodes": [],
+      "edges": [],
+      "data": {
+        "useCase": "Batalkan booking tanpa DP",
+        "code": "UC-09",
+        "actor": "Pemicu waktu",
+        "description": "Batalkan booking tanpa DP.",
+        "pre": "Booking menunggu DP.",
+        "post": "Booking dibatalkan dan slot dibuka kembali.",
+        "main": [
+          {
+            "actor": "Pemicu waktu memulai pemeriksaan setelah dua jam.",
+            "system": "Sistem memeriksa status DP booking."
+          },
+          {
+            "actor": "Pemicu waktu menyatakan tenggat telah lewat.",
+            "system": "Sistem membatalkan booking yang belum dibayar dan membuka slot."
+          }
+        ],
+        "alt": [
+          {
+            "step": "1",
+            "condition": "DP terverifikasi?",
+            "action": "Sistem mempertahankan booking sebagai terkonfirmasi."
+          }
+        ]
+      },
+      "settings": {
+        "useCaseId": "444571bb"
+      }
+    },
+    {
+      "id": "2722eb5a",
+      "type": "dfd",
+      "title": "DFD Konteks",
+      "nodes": [
+        {
+          "id": "e249c3b3",
+          "kind": "process",
+          "x": 330,
+          "y": 250,
+          "w": 127,
+          "h": 127,
+          "label": "Sistem Booking GOR Smash",
+          "number": "0"
+        },
+        {
+          "id": "9dfa6f0f",
+          "kind": "external",
+          "x": 20,
+          "y": 285,
+          "w": 110,
+          "h": 54,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "319c27c0",
+          "kind": "external",
+          "x": 720,
+          "y": 145,
+          "w": 110,
+          "h": 54,
+          "label": "Admin GOR"
+        },
+        {
+          "id": "494a873d",
+          "kind": "external",
+          "x": 720,
+          "y": 440,
+          "w": 110,
+          "h": 54,
+          "label": "Pemilik"
+        }
+      ],
+      "edges": [
+        {
+          "id": "655ac8be",
+          "kind": "flow",
+          "from": "9dfa6f0f",
+          "to": "e249c3b3",
+          "label": "permintaan jadwal, data booking, bukti transfer, kode booking"
+        },
+        {
+          "id": "e599f5eb",
+          "kind": "flow",
+          "from": "e249c3b3",
+          "to": "9dfa6f0f",
+          "label": "jadwal tersedia, kode dan status booking, konfirmasi DP"
+        },
+        {
+          "id": "eb01e027",
+          "kind": "flow",
+          "from": "319c27c0",
+          "to": "e249c3b3",
+          "label": "data booking telepon, hasil verifikasi DP"
+        },
+        {
+          "id": "3b3d88ce",
+          "kind": "flow",
+          "from": "e249c3b3",
+          "to": "319c27c0",
+          "label": "daftar booking, bukti transfer"
+        },
+        {
+          "id": "21b4d4dd",
+          "kind": "flow",
+          "from": "494a873d",
+          "to": "e249c3b3",
+          "label": "permintaan laporan"
+        },
+        {
+          "id": "c873de68",
+          "kind": "flow",
+          "from": "e249c3b3",
+          "to": "494a873d",
+          "label": "laporan pendapatan, ringkasan jam sepi"
+        }
+      ],
+      "data": {},
+      "settings": {
+        "level": "context"
+      }
+    },
+    {
+      "id": "5dc64857",
+      "type": "dfd",
+      "title": "DFD Level 1",
+      "nodes": [
+        {
+          "id": "aab7f085",
+          "kind": "process",
+          "x": 245,
+          "y": 85,
+          "w": 113,
+          "h": 113,
+          "label": "Kelola jadwal dan booking",
+          "number": "1.0"
+        },
+        {
+          "id": "bd361bce",
+          "kind": "process",
+          "x": 245,
+          "y": 330,
+          "w": 120,
+          "h": 120,
+          "label": "Kelola DP dan pembayaran",
+          "number": "2.0"
+        },
+        {
+          "id": "01d37a36",
+          "kind": "process",
+          "x": 570,
+          "y": 560,
+          "w": 120,
+          "h": 120,
+          "label": "Susun laporan",
+          "number": "3.0"
+        },
+        {
+          "id": "346c1100",
+          "kind": "external",
+          "x": -80,
+          "y": 155,
+          "w": 110,
+          "h": 54,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "0e44b0d0",
+          "kind": "external",
+          "x": -80,
+          "y": 390,
+          "w": 110,
+          "h": 54,
+          "label": "Admin GOR"
+        },
+        {
+          "id": "8cb93935",
+          "kind": "external",
+          "x": 790,
+          "y": 590,
+          "w": 110,
+          "h": 54,
+          "label": "Pemilik"
+        },
+        {
+          "id": "16fa6d88",
+          "kind": "store",
+          "x": 500,
+          "y": 70,
+          "w": 245,
+          "h": 40,
+          "label": "Data pelanggan dan lapangan",
+          "number": "D1"
+        },
+        {
+          "id": "4ab261d2",
+          "kind": "store",
+          "x": 500,
+          "y": 300,
+          "w": 170,
+          "h": 40,
+          "label": "Data pemesanan",
+          "number": "D2"
+        },
+        {
+          "id": "966096fe",
+          "kind": "store",
+          "x": 500,
+          "y": 440,
+          "w": 230,
+          "h": 40,
+          "label": "Data pembayaran dan bukti",
+          "number": "D3"
+        }
+      ],
+      "edges": [
+        {
+          "id": "c3866545",
+          "kind": "flow",
+          "from": "346c1100",
+          "to": "aab7f085",
+          "label": "permintaan jadwal, data booking, bukti transfer, kode booking"
+        },
+        {
+          "id": "4b96f50e",
+          "kind": "flow",
+          "from": "aab7f085",
+          "to": "346c1100",
+          "label": "jadwal tersedia, kode dan status booking, konfirmasi DP"
+        },
+        {
+          "id": "4a1f1f4a",
+          "kind": "flow",
+          "from": "0e44b0d0",
+          "to": "aab7f085",
+          "label": "data booking telepon, hasil verifikasi DP"
+        },
+        {
+          "id": "eae106bb",
+          "kind": "flow",
+          "from": "aab7f085",
+          "to": "0e44b0d0",
+          "label": "daftar booking, bukti transfer"
+        },
+        {
+          "id": "d89b50ae",
+          "kind": "flow",
+          "from": "8cb93935",
+          "to": "01d37a36",
+          "label": "permintaan laporan"
+        },
+        {
+          "id": "8cb6a7a0",
+          "kind": "flow",
+          "from": "01d37a36",
+          "to": "8cb93935",
+          "label": "laporan pendapatan, ringkasan jam sepi"
+        },
+        {
+          "id": "df5fb0c3",
+          "kind": "flow",
+          "from": "16fa6d88",
+          "to": "aab7f085",
+          "label": "data lapangan dan pelanggan"
+        },
+        {
+          "id": "3e53dddf",
+          "kind": "flow",
+          "from": "aab7f085",
+          "to": "16fa6d88",
+          "label": "data booking pelanggan baru"
+        },
+        {
+          "id": "93a2cba6",
+          "kind": "flow",
+          "from": "4ab261d2",
+          "to": "aab7f085",
+          "label": "jadwal dan status slot"
+        },
+        {
+          "id": "9b4be7cb",
+          "kind": "flow",
+          "from": "aab7f085",
+          "to": "4ab261d2",
+          "label": "booking baru dan perubahan jadwal"
+        },
+        {
+          "id": "e3a4b823",
+          "kind": "flow",
+          "from": "4ab261d2",
+          "to": "bd361bce",
+          "label": "booking dan tenggat DP"
+        },
+        {
+          "id": "feedb9b8",
+          "kind": "flow",
+          "from": "bd361bce",
+          "to": "4ab261d2",
+          "label": "status DP, batal otomatis"
+        },
+        {
+          "id": "9dcb9337",
+          "kind": "flow",
+          "from": "966096fe",
+          "to": "bd361bce",
+          "label": "bukti dan riwayat pembayaran"
+        },
+        {
+          "id": "e8425353",
+          "kind": "flow",
+          "from": "bd361bce",
+          "to": "966096fe",
+          "label": "bukti transfer dan hasil verifikasi"
+        },
+        {
+          "id": "b6b757af",
+          "kind": "flow",
+          "from": "4ab261d2",
+          "to": "01d37a36",
+          "label": "tanggal, jam dan status booking"
+        },
+        {
+          "id": "a5034bb0",
+          "kind": "flow",
+          "from": "966096fe",
+          "to": "01d37a36",
+          "label": "jumlah pembayaran terverifikasi"
+        }
+      ],
+      "data": {},
+      "settings": {
+        "level": "1"
+      }
+    },
+    {
+      "id": "362ec6cf",
+      "type": "erd",
+      "title": "ERD GOR Smash (Notasi Chen)",
+      "nodes": [
+        {
+          "id": "0ebbdd96",
+          "kind": "entity",
+          "x": 30,
+          "y": 190,
+          "w": 110,
+          "h": 46,
+          "label": "Pelanggan",
+          "weak": false
+        },
+        {
+          "id": "7ed0fff4",
+          "kind": "entity",
+          "x": 330,
+          "y": 70,
+          "w": 110,
+          "h": 46,
+          "label": "Lapangan",
+          "weak": false
+        },
+        {
+          "id": "709e17ca",
+          "kind": "entity",
+          "x": 330,
+          "y": 340,
+          "w": 110,
+          "h": 46,
+          "label": "Pemesanan",
+          "weak": false
+        },
+        {
+          "id": "500e2a98",
+          "kind": "entity",
+          "x": 680,
+          "y": 70,
+          "w": 110,
+          "h": 46,
+          "label": "Admin",
+          "weak": false
+        },
+        {
+          "id": "7a61938b",
+          "kind": "entity",
+          "x": 680,
+          "y": 365,
+          "w": 112,
+          "h": 46,
+          "label": "Pembayaran",
+          "weak": false
+        },
+        {
+          "id": "0f6d7c3d",
+          "kind": "attribute",
+          "x": -115,
+          "y": 130,
+          "w": 111,
+          "h": 40,
+          "label": "id_pelanggan",
+          "attrType": "key"
+        },
+        {
+          "id": "48a72ea6",
+          "kind": "attribute",
+          "x": 175,
+          "y": 130,
+          "w": 84,
+          "h": 40,
+          "label": "nama",
+          "attrType": "normal"
+        },
+        {
+          "id": "b0f03923",
+          "kind": "attribute",
+          "x": -115,
+          "y": 212,
+          "w": 97,
+          "h": 40,
+          "label": "no_telepon",
+          "attrType": "normal"
+        },
+        {
+          "id": "00faa09a",
+          "kind": "attribute",
+          "x": 185,
+          "y": 10,
+          "w": 103,
+          "h": 40,
+          "label": "id_lapangan",
+          "attrType": "key"
+        },
+        {
+          "id": "2006590e",
+          "kind": "attribute",
+          "x": 475,
+          "y": 10,
+          "w": 126,
+          "h": 40,
+          "label": "nama_lapangan",
+          "attrType": "normal"
+        },
+        {
+          "id": "065224c1",
+          "kind": "attribute",
+          "x": 185,
+          "y": 92,
+          "w": 108,
+          "h": 40,
+          "label": "tarif_per_jam",
+          "attrType": "normal"
+        },
+        {
+          "id": "7f45ec65",
+          "kind": "attribute",
+          "x": 185,
+          "y": 280,
+          "w": 118,
+          "h": 40,
+          "label": "id_pemesanan",
+          "attrType": "key"
+        },
+        {
+          "id": "7c880d16",
+          "kind": "attribute",
+          "x": 475,
+          "y": 280,
+          "w": 113,
+          "h": 40,
+          "label": "tanggal_sewa",
+          "attrType": "normal"
+        },
+        {
+          "id": "1bf7ca4b",
+          "kind": "attribute",
+          "x": 185,
+          "y": 362,
+          "w": 168,
+          "h": 40,
+          "label": "jam_mulai, jam_selesai",
+          "attrType": "normal"
+        },
+        {
+          "id": "ca954890",
+          "kind": "attribute",
+          "x": 475,
+          "y": 362,
+          "w": 150,
+          "h": 40,
+          "label": "total_biaya, DP 50%",
+          "attrType": "normal"
+        },
+        {
+          "id": "dc249e5e",
+          "kind": "attribute",
+          "x": 185,
+          "y": 444,
+          "w": 130,
+          "h": 40,
+          "label": "batas_DP, status",
+          "attrType": "normal"
+        },
+        {
+          "id": "0d9cc5a3",
+          "kind": "attribute",
+          "x": 475,
+          "y": 444,
+          "w": 214,
+          "h": 40,
+          "label": "sumber, pindah_jadwal_dipakai",
+          "attrType": "normal"
+        },
+        {
+          "id": "f586acc8",
+          "kind": "attribute",
+          "x": 535,
+          "y": 10,
+          "w": 85,
+          "h": 40,
+          "label": "id_admin",
+          "attrType": "key"
+        },
+        {
+          "id": "e2a901f6",
+          "kind": "attribute",
+          "x": 825,
+          "y": 10,
+          "w": 108,
+          "h": 40,
+          "label": "nama_admin",
+          "attrType": "normal"
+        },
+        {
+          "id": "2cba5759",
+          "kind": "attribute",
+          "x": 535,
+          "y": 92,
+          "w": 131,
+          "h": 40,
+          "label": "username, peran",
+          "attrType": "normal"
+        },
+        {
+          "id": "271922a3",
+          "kind": "attribute",
+          "x": 535,
+          "y": 305,
+          "w": 122,
+          "h": 40,
+          "label": "id_pembayaran",
+          "attrType": "key"
+        },
+        {
+          "id": "e4d1690a",
+          "kind": "attribute",
+          "x": 825,
+          "y": 305,
+          "w": 155,
+          "h": 40,
+          "label": "tanggal_pembayaran",
+          "attrType": "normal"
+        },
+        {
+          "id": "daddceed",
+          "kind": "attribute",
+          "x": 535,
+          "y": 387,
+          "w": 204,
+          "h": 40,
+          "label": "jumlah, jenis, status_verifikasi",
+          "attrType": "normal"
+        },
+        {
+          "id": "35a12ea1",
+          "kind": "attribute",
+          "x": 825,
+          "y": 387,
+          "w": 111,
+          "h": 40,
+          "label": "bukti_transfer",
+          "attrType": "normal"
+        },
+        {
+          "id": "41e53cb4",
+          "kind": "relationship",
+          "x": 175,
+          "y": 265,
+          "w": 123,
+          "h": 64,
+          "label": "membuat",
+          "identifying": false
+        },
+        {
+          "id": "6c6da353",
+          "kind": "relationship",
+          "x": 395,
+          "y": 240,
+          "w": 110,
+          "h": 64,
+          "label": "dipesan",
+          "identifying": false
+        },
+        {
+          "id": "96d26c02",
+          "kind": "relationship",
+          "x": 590,
+          "y": 250,
+          "w": 121,
+          "h": 64,
+          "label": "mencatat",
+          "identifying": false
+        },
+        {
+          "id": "dba9a3ff",
+          "kind": "relationship",
+          "x": 555,
+          "y": 390,
+          "w": 110,
+          "h": 64,
+          "label": "memiliki",
+          "identifying": false
+        },
+        {
+          "id": "b3041279",
+          "kind": "relationship",
+          "x": 745,
+          "y": 255,
+          "w": 166,
+          "h": 64,
+          "label": "memverifikasi",
+          "identifying": false
+        }
+      ],
+      "edges": [
+        {
+          "id": "61a47024",
+          "kind": "link",
+          "from": "0f6d7c3d",
+          "to": "0ebbdd96",
+          "label": ""
+        },
+        {
+          "id": "2d0af70e",
+          "kind": "link",
+          "from": "48a72ea6",
+          "to": "0ebbdd96",
+          "label": ""
+        },
+        {
+          "id": "d2e047dc",
+          "kind": "link",
+          "from": "b0f03923",
+          "to": "0ebbdd96",
+          "label": ""
+        },
+        {
+          "id": "6e70682c",
+          "kind": "link",
+          "from": "00faa09a",
+          "to": "7ed0fff4",
+          "label": ""
+        },
+        {
+          "id": "d1c8c95a",
+          "kind": "link",
+          "from": "2006590e",
+          "to": "7ed0fff4",
+          "label": ""
+        },
+        {
+          "id": "2d20dd1a",
+          "kind": "link",
+          "from": "065224c1",
+          "to": "7ed0fff4",
+          "label": ""
+        },
+        {
+          "id": "1c679633",
+          "kind": "link",
+          "from": "7f45ec65",
+          "to": "709e17ca",
+          "label": ""
+        },
+        {
+          "id": "7ee1fe39",
+          "kind": "link",
+          "from": "7c880d16",
+          "to": "709e17ca",
+          "label": ""
+        },
+        {
+          "id": "dee4a846",
+          "kind": "link",
+          "from": "1bf7ca4b",
+          "to": "709e17ca",
+          "label": ""
+        },
+        {
+          "id": "39b0ae11",
+          "kind": "link",
+          "from": "ca954890",
+          "to": "709e17ca",
+          "label": ""
+        },
+        {
+          "id": "03195241",
+          "kind": "link",
+          "from": "dc249e5e",
+          "to": "709e17ca",
+          "label": ""
+        },
+        {
+          "id": "5e5f7d82",
+          "kind": "link",
+          "from": "0d9cc5a3",
+          "to": "709e17ca",
+          "label": ""
+        },
+        {
+          "id": "2e0ef351",
+          "kind": "link",
+          "from": "f586acc8",
+          "to": "500e2a98",
+          "label": ""
+        },
+        {
+          "id": "3956e5e5",
+          "kind": "link",
+          "from": "e2a901f6",
+          "to": "500e2a98",
+          "label": ""
+        },
+        {
+          "id": "50ddb540",
+          "kind": "link",
+          "from": "2cba5759",
+          "to": "500e2a98",
+          "label": ""
+        },
+        {
+          "id": "d0aef8c4",
+          "kind": "link",
+          "from": "271922a3",
+          "to": "7a61938b",
+          "label": ""
+        },
+        {
+          "id": "9b8a18fb",
+          "kind": "link",
+          "from": "e4d1690a",
+          "to": "7a61938b",
+          "label": ""
+        },
+        {
+          "id": "0bbbac0f",
+          "kind": "link",
+          "from": "daddceed",
+          "to": "7a61938b",
+          "label": ""
+        },
+        {
+          "id": "965a7c06",
+          "kind": "link",
+          "from": "35a12ea1",
+          "to": "7a61938b",
+          "label": ""
+        },
+        {
+          "id": "af275466",
+          "kind": "link",
+          "from": "0ebbdd96",
+          "to": "41e53cb4",
+          "label": "",
+          "card": "1"
+        },
+        {
+          "id": "37443334",
+          "kind": "link",
+          "from": "709e17ca",
+          "to": "41e53cb4",
+          "label": "",
+          "card": "N"
+        },
+        {
+          "id": "e6ba5089",
+          "kind": "link",
+          "from": "7ed0fff4",
+          "to": "6c6da353",
+          "label": "",
+          "card": "1"
+        },
+        {
+          "id": "1def4ec1",
+          "kind": "link",
+          "from": "709e17ca",
+          "to": "6c6da353",
+          "label": "",
+          "card": "N"
+        },
+        {
+          "id": "259be700",
+          "kind": "link",
+          "from": "500e2a98",
+          "to": "96d26c02",
+          "label": "",
+          "card": "1"
+        },
+        {
+          "id": "64912bf0",
+          "kind": "link",
+          "from": "709e17ca",
+          "to": "96d26c02",
+          "label": "",
+          "card": "N"
+        },
+        {
+          "id": "444d7b53",
+          "kind": "link",
+          "from": "709e17ca",
+          "to": "dba9a3ff",
+          "label": "",
+          "card": "1"
+        },
+        {
+          "id": "5d02f362",
+          "kind": "link",
+          "from": "7a61938b",
+          "to": "dba9a3ff",
+          "label": "",
+          "card": "N"
+        },
+        {
+          "id": "7a9be3ab",
+          "kind": "link",
+          "from": "500e2a98",
+          "to": "b3041279",
+          "label": "",
+          "card": "1"
+        },
+        {
+          "id": "549868e0",
+          "kind": "link",
+          "from": "7a61938b",
+          "to": "b3041279",
+          "label": "",
+          "card": "N"
+        }
+      ],
+      "data": {},
+      "settings": {}
+    },
+    {
+      "id": "326054d3",
+      "type": "activity",
+      "title": "Activity — Lihat jadwal kosong",
+      "nodes": [
+        {
+          "id": "e90144a0",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pelanggan",
+          "role": "actor"
+        },
+        {
+          "id": "e07b3c22",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "2271ebc5",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "421ccda3",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 139,
+          "h": 52,
+          "label": "Pelanggan memilih tanggal dan durasi."
+        },
+        {
+          "id": "9d8a3412",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 173,
+          "h": 52,
+          "label": "Sistem menampilkan slot yang masih kosong."
+        },
+        {
+          "id": "1b992260",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 163,
+          "h": 52,
+          "label": "Pelanggan memilih slot tersedia."
+        },
+        {
+          "id": "be19abd7",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 166,
+          "h": 52,
+          "label": "Sistem memastikan slot masih tersedia."
+        },
+        {
+          "id": "8c55cc4b",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "Slot tersedia?"
+        },
+        {
+          "id": "adb267cd",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "c631c311",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 161,
+          "h": 69,
+          "label": "Sistem meminta pelanggan memilih slot lain."
+        },
+        {
+          "id": "e81f0341",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "f4886c17",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "fa68faf3",
+          "kind": "flow",
+          "from": "2271ebc5",
+          "to": "421ccda3",
+          "label": ""
+        },
+        {
+          "id": "e2fc60f5",
+          "kind": "flow",
+          "from": "421ccda3",
+          "to": "9d8a3412",
+          "label": ""
+        },
+        {
+          "id": "d0876bee",
+          "kind": "flow",
+          "from": "9d8a3412",
+          "to": "1b992260",
+          "label": ""
+        },
+        {
+          "id": "3f0d8935",
+          "kind": "flow",
+          "from": "1b992260",
+          "to": "be19abd7",
+          "label": ""
+        },
+        {
+          "id": "b11c730f",
+          "kind": "flow",
+          "from": "be19abd7",
+          "to": "8c55cc4b",
+          "label": ""
+        },
+        {
+          "id": "adb70ee2",
+          "kind": "flow",
+          "from": "8c55cc4b",
+          "to": "adb267cd",
+          "label": "[YA]"
+        },
+        {
+          "id": "ab5b8f6e",
+          "kind": "flow",
+          "from": "8c55cc4b",
+          "to": "c631c311",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "1cd7264b",
+          "kind": "flow",
+          "from": "adb267cd",
+          "to": "e81f0341",
+          "label": ""
+        },
+        {
+          "id": "03e97a13",
+          "kind": "flow",
+          "from": "c631c311",
+          "to": "f4886c17",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "98b0b7e0"
+      }
+    },
+    {
+      "id": "a16ab875",
+      "type": "sequence",
+      "title": "Sequence — Lihat jadwal kosong",
+      "nodes": [
+        {
+          "id": "35be7f7e",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 80,
+          "h": 88,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "5d6acac5",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "d3afdb86",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "2720b7f2",
+          "kind": "sync",
+          "from": "35be7f7e",
+          "to": "5d6acac5",
+          "label": "pilihTanggalDanDurasi(tanggal,durasi)",
+          "y": 145
+        },
+        {
+          "id": "b1a05c9d",
+          "kind": "sync",
+          "from": "5d6acac5",
+          "to": "d3afdb86",
+          "label": "ambilSlotKosong(tanggal,durasi)",
+          "y": 193
+        },
+        {
+          "id": "922fffca",
+          "kind": "sync",
+          "from": "35be7f7e",
+          "to": "5d6acac5",
+          "label": "pilihSlot(slot)",
+          "y": 235
+        },
+        {
+          "id": "34a1d868",
+          "kind": "sync",
+          "from": "5d6acac5",
+          "to": "d3afdb86",
+          "label": "periksaSlotTerpilih(slot)",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "98b0b7e0"
+      }
+    },
+    {
+      "id": "2f882272",
+      "type": "activity",
+      "title": "Activity — Buat booking",
+      "nodes": [
+        {
+          "id": "0b3c13f6",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pelanggan",
+          "role": "actor"
+        },
+        {
+          "id": "6a6b952c",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "b896e39d",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "430d3626",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 164,
+          "h": 69,
+          "label": "Pelanggan memilih lapangan, tanggal, jam, dan durasi."
+        },
+        {
+          "id": "b220c56d",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 135,
+          "h": 52,
+          "label": "Sistem memeriksa benturan jadwal."
+        },
+        {
+          "id": "5b04ffac",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 177,
+          "h": 52,
+          "label": "Pelanggan mengirim data nama dan nomor telepon."
+        },
+        {
+          "id": "f20aa48c",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 174,
+          "h": 52,
+          "label": "Sistem menghitung biaya dan DP 50%."
+        },
+        {
+          "id": "4c2651f4",
+          "kind": "action",
+          "x": 45,
+          "y": 317,
+          "w": 167,
+          "h": 52,
+          "label": "Pelanggan mengonfirmasi booking."
+        },
+        {
+          "id": "b3df8720",
+          "kind": "action",
+          "x": 405,
+          "y": 375,
+          "w": 168,
+          "h": 86,
+          "label": "Sistem menyimpan booking dengan tenggat DP dua jam dan membuat kode."
+        },
+        {
+          "id": "c2a56a3b",
+          "kind": "decision",
+          "x": 475,
+          "y": 433,
+          "w": 40,
+          "h": 40,
+          "label": "Slot bebas?"
+        },
+        {
+          "id": "2a1dbd32",
+          "kind": "action",
+          "x": 405,
+          "y": 508,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "2c27770b",
+          "kind": "action",
+          "x": 405,
+          "y": 588,
+          "w": 161,
+          "h": 52,
+          "label": "Sistem menolak jadwal yang bentrok."
+        },
+        {
+          "id": "30a51344",
+          "kind": "final",
+          "x": 525,
+          "y": 566,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "16c874ae",
+          "kind": "final",
+          "x": 525,
+          "y": 666,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "2197b9e2",
+          "kind": "flow",
+          "from": "b896e39d",
+          "to": "430d3626",
+          "label": ""
+        },
+        {
+          "id": "bd609267",
+          "kind": "flow",
+          "from": "430d3626",
+          "to": "b220c56d",
+          "label": ""
+        },
+        {
+          "id": "735398a0",
+          "kind": "flow",
+          "from": "b220c56d",
+          "to": "5b04ffac",
+          "label": ""
+        },
+        {
+          "id": "392d8722",
+          "kind": "flow",
+          "from": "5b04ffac",
+          "to": "f20aa48c",
+          "label": ""
+        },
+        {
+          "id": "395f2af4",
+          "kind": "flow",
+          "from": "f20aa48c",
+          "to": "4c2651f4",
+          "label": ""
+        },
+        {
+          "id": "ef5a8a4d",
+          "kind": "flow",
+          "from": "4c2651f4",
+          "to": "b3df8720",
+          "label": ""
+        },
+        {
+          "id": "1ee4bb2a",
+          "kind": "flow",
+          "from": "b3df8720",
+          "to": "c2a56a3b",
+          "label": ""
+        },
+        {
+          "id": "6a0c73a1",
+          "kind": "flow",
+          "from": "c2a56a3b",
+          "to": "2a1dbd32",
+          "label": "[YA]"
+        },
+        {
+          "id": "5a215e09",
+          "kind": "flow",
+          "from": "c2a56a3b",
+          "to": "2c27770b",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "6394920a",
+          "kind": "flow",
+          "from": "2a1dbd32",
+          "to": "30a51344",
+          "label": ""
+        },
+        {
+          "id": "a20c5e11",
+          "kind": "flow",
+          "from": "2c27770b",
+          "to": "16c874ae",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "028745cf"
+      }
+    },
+    {
+      "id": "477fae17",
+      "type": "sequence",
+      "title": "Sequence — Buat booking",
+      "nodes": [
+        {
+          "id": "1c23d101",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 80,
+          "h": 88,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "2f2d052a",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "6b435349",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "3900e37a",
+          "kind": "sync",
+          "from": "1c23d101",
+          "to": "2f2d052a",
+          "label": "pilihSlot(lapangan,tanggal,jam,durasi)",
+          "y": 145
+        },
+        {
+          "id": "5591c387",
+          "kind": "sync",
+          "from": "2f2d052a",
+          "to": "6b435349",
+          "label": "cekBenturanSlot(lapangan,waktu)",
+          "y": 193
+        },
+        {
+          "id": "2b56a964",
+          "kind": "sync",
+          "from": "1c23d101",
+          "to": "2f2d052a",
+          "label": "isiDataPelanggan(nama,telepon)",
+          "y": 235
+        },
+        {
+          "id": "95c7ca56",
+          "kind": "sync",
+          "from": "2f2d052a",
+          "to": "6b435349",
+          "label": "hitungTotalDanDP()",
+          "y": 283
+        },
+        {
+          "id": "b06f8d4d",
+          "kind": "sync",
+          "from": "1c23d101",
+          "to": "2f2d052a",
+          "label": "konfirmasiBooking()",
+          "y": 325
+        },
+        {
+          "id": "07f62b60",
+          "kind": "sync",
+          "from": "2f2d052a",
+          "to": "6b435349",
+          "label": "simpanBookingDanTenggat()",
+          "y": 373
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "028745cf"
+      }
+    },
+    {
+      "id": "14d40f01",
+      "type": "activity",
+      "title": "Activity — Unggah bukti transfer",
+      "nodes": [
+        {
+          "id": "58c0921b",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pelanggan",
+          "role": "actor"
+        },
+        {
+          "id": "08250d5c",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "2eb0ce99",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "69c85ef5",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 172,
+          "h": 52,
+          "label": "Pelanggan memasukkan kode booking."
+        },
+        {
+          "id": "597b4d8b",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 164,
+          "h": 52,
+          "label": "Sistem menampilkan jumlah DP dan tenggat."
+        },
+        {
+          "id": "e8c78c83",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 170,
+          "h": 52,
+          "label": "Pelanggan mengunggah bukti transfer."
+        },
+        {
+          "id": "7b5cd160",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 168,
+          "h": 86,
+          "label": "Sistem memeriksa tenggat dan menyimpan bukti untuk verifikasi admin."
+        },
+        {
+          "id": "29bdf02b",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "Bukti valid dan tenggat berlaku?"
+        },
+        {
+          "id": "d6ba25d1",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "e0a75aaf",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 169,
+          "h": 69,
+          "label": "Sistem menjelaskan berkas tidak sesuai atau tenggat sudah lewat."
+        },
+        {
+          "id": "611ed332",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "4319200a",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "5637d1ab",
+          "kind": "flow",
+          "from": "2eb0ce99",
+          "to": "69c85ef5",
+          "label": ""
+        },
+        {
+          "id": "f683debc",
+          "kind": "flow",
+          "from": "69c85ef5",
+          "to": "597b4d8b",
+          "label": ""
+        },
+        {
+          "id": "9db35330",
+          "kind": "flow",
+          "from": "597b4d8b",
+          "to": "e8c78c83",
+          "label": ""
+        },
+        {
+          "id": "fefb36ba",
+          "kind": "flow",
+          "from": "e8c78c83",
+          "to": "7b5cd160",
+          "label": ""
+        },
+        {
+          "id": "103ede5d",
+          "kind": "flow",
+          "from": "7b5cd160",
+          "to": "29bdf02b",
+          "label": ""
+        },
+        {
+          "id": "cb56fa7f",
+          "kind": "flow",
+          "from": "29bdf02b",
+          "to": "d6ba25d1",
+          "label": "[YA]"
+        },
+        {
+          "id": "5d65fe69",
+          "kind": "flow",
+          "from": "29bdf02b",
+          "to": "e0a75aaf",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "6bd2c155",
+          "kind": "flow",
+          "from": "d6ba25d1",
+          "to": "611ed332",
+          "label": ""
+        },
+        {
+          "id": "e29260c5",
+          "kind": "flow",
+          "from": "e0a75aaf",
+          "to": "4319200a",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "c4a397a8"
+      }
+    },
+    {
+      "id": "c72f3ab0",
+      "type": "sequence",
+      "title": "Sequence — Unggah bukti transfer",
+      "nodes": [
+        {
+          "id": "072557b5",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 80,
+          "h": 88,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "20e5ee2d",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "a57c5436",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "142948d8",
+          "kind": "sync",
+          "from": "072557b5",
+          "to": "20e5ee2d",
+          "label": "cariBooking(kode)",
+          "y": 145
+        },
+        {
+          "id": "0017a1a7",
+          "kind": "sync",
+          "from": "20e5ee2d",
+          "to": "a57c5436",
+          "label": "bacaStatusDanTenggat(kode)",
+          "y": 193
+        },
+        {
+          "id": "5d83b5e8",
+          "kind": "sync",
+          "from": "072557b5",
+          "to": "20e5ee2d",
+          "label": "unggahBuktiTransfer(berkas)",
+          "y": 235
+        },
+        {
+          "id": "d3dddbfe",
+          "kind": "sync",
+          "from": "20e5ee2d",
+          "to": "a57c5436",
+          "label": "simpanBuktiTransfer(berkas)",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "c4a397a8"
+      }
+    },
+    {
+      "id": "a5f40dc1",
+      "type": "activity",
+      "title": "Activity — Cek status booking",
+      "nodes": [
+        {
+          "id": "d2b40bd7",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pelanggan",
+          "role": "actor"
+        },
+        {
+          "id": "99aff9ae",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "8879ee17",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "5c1e52a2",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 172,
+          "h": 52,
+          "label": "Pelanggan memasukkan kode booking."
+        },
+        {
+          "id": "91680782",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 147,
+          "h": 52,
+          "label": "Sistem mencari data booking."
+        },
+        {
+          "id": "e1099f65",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 144,
+          "h": 52,
+          "label": "Pelanggan meminta rincian status."
+        },
+        {
+          "id": "5a2e8c82",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 171,
+          "h": 69,
+          "label": "Sistem menampilkan jadwal, biaya, dan status booking."
+        },
+        {
+          "id": "b479ee2a",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "Booking ditemukan?"
+        },
+        {
+          "id": "d0c4e9c1",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "80055d35",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 172,
+          "h": 69,
+          "label": "Sistem memberi tahu pelanggan bahwa booking tidak ditemukan."
+        },
+        {
+          "id": "0241e899",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "421c6368",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "35a38cae",
+          "kind": "flow",
+          "from": "8879ee17",
+          "to": "5c1e52a2",
+          "label": ""
+        },
+        {
+          "id": "0e32e3d7",
+          "kind": "flow",
+          "from": "5c1e52a2",
+          "to": "91680782",
+          "label": ""
+        },
+        {
+          "id": "7caee826",
+          "kind": "flow",
+          "from": "91680782",
+          "to": "e1099f65",
+          "label": ""
+        },
+        {
+          "id": "c30587c9",
+          "kind": "flow",
+          "from": "e1099f65",
+          "to": "5a2e8c82",
+          "label": ""
+        },
+        {
+          "id": "620f43eb",
+          "kind": "flow",
+          "from": "5a2e8c82",
+          "to": "b479ee2a",
+          "label": ""
+        },
+        {
+          "id": "1e089b4a",
+          "kind": "flow",
+          "from": "b479ee2a",
+          "to": "d0c4e9c1",
+          "label": "[YA]"
+        },
+        {
+          "id": "ace7768d",
+          "kind": "flow",
+          "from": "b479ee2a",
+          "to": "80055d35",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "e8f4a974",
+          "kind": "flow",
+          "from": "d0c4e9c1",
+          "to": "0241e899",
+          "label": ""
+        },
+        {
+          "id": "a9963f8c",
+          "kind": "flow",
+          "from": "80055d35",
+          "to": "421c6368",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "5b13d964"
+      }
+    },
+    {
+      "id": "db2f43d6",
+      "type": "sequence",
+      "title": "Sequence — Cek status booking",
+      "nodes": [
+        {
+          "id": "22c00f9f",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 80,
+          "h": 88,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "75268717",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "3f006f56",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "0bccfc7f",
+          "kind": "sync",
+          "from": "22c00f9f",
+          "to": "75268717",
+          "label": "cekStatusBooking(kode)",
+          "y": 145
+        },
+        {
+          "id": "fdbfccfc",
+          "kind": "sync",
+          "from": "75268717",
+          "to": "3f006f56",
+          "label": "ambilBooking(kode)",
+          "y": 193
+        },
+        {
+          "id": "733695be",
+          "kind": "sync",
+          "from": "22c00f9f",
+          "to": "75268717",
+          "label": "mintaRincianStatus(kode)",
+          "y": 235
+        },
+        {
+          "id": "2c6e2eae",
+          "kind": "sync",
+          "from": "75268717",
+          "to": "3f006f56",
+          "label": "ambilRincianStatus(kode)",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "5b13d964"
+      }
+    },
+    {
+      "id": "e4dec1c5",
+      "type": "activity",
+      "title": "Activity — Kelola perubahan jadwal",
+      "nodes": [
+        {
+          "id": "e6ad2eb2",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pelanggan",
+          "role": "actor"
+        },
+        {
+          "id": "3c5f3193",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "65dff8e2",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "43d2c5c7",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 174,
+          "h": 69,
+          "label": "Pelanggan meminta pindah jadwal lebih dari 24 jam sebelum bermain."
+        },
+        {
+          "id": "a0adfca4",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 176,
+          "h": 69,
+          "label": "Sistem memeriksa aturan dan jatah pindah satu kali."
+        },
+        {
+          "id": "c86773bd",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 163,
+          "h": 52,
+          "label": "Pelanggan memilih slot baru yang tersedia."
+        },
+        {
+          "id": "ffdf0d7c",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 159,
+          "h": 69,
+          "label": "Sistem menyimpan perubahan jadwal satu kali."
+        },
+        {
+          "id": "78deefce",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "Permintaan kurang dari 24 jam?"
+        },
+        {
+          "id": "5d91c2ca",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "f519ef22",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 178,
+          "h": 69,
+          "label": "Sistem membatalkan booking dan mencatat DP hangus."
+        },
+        {
+          "id": "14c2db5d",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "4f4fe4a0",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "2623ca16",
+          "kind": "flow",
+          "from": "65dff8e2",
+          "to": "43d2c5c7",
+          "label": ""
+        },
+        {
+          "id": "7a337f0a",
+          "kind": "flow",
+          "from": "43d2c5c7",
+          "to": "a0adfca4",
+          "label": ""
+        },
+        {
+          "id": "efd77389",
+          "kind": "flow",
+          "from": "a0adfca4",
+          "to": "c86773bd",
+          "label": ""
+        },
+        {
+          "id": "b34b0b3b",
+          "kind": "flow",
+          "from": "c86773bd",
+          "to": "ffdf0d7c",
+          "label": ""
+        },
+        {
+          "id": "7c20dc21",
+          "kind": "flow",
+          "from": "ffdf0d7c",
+          "to": "78deefce",
+          "label": ""
+        },
+        {
+          "id": "f7b0113a",
+          "kind": "flow",
+          "from": "78deefce",
+          "to": "5d91c2ca",
+          "label": "[YA]"
+        },
+        {
+          "id": "2af301c3",
+          "kind": "flow",
+          "from": "78deefce",
+          "to": "f519ef22",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "99ac6c45",
+          "kind": "flow",
+          "from": "5d91c2ca",
+          "to": "14c2db5d",
+          "label": ""
+        },
+        {
+          "id": "96cb1e80",
+          "kind": "flow",
+          "from": "f519ef22",
+          "to": "4f4fe4a0",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "d38f869d"
+      }
+    },
+    {
+      "id": "4edc7f06",
+      "type": "sequence",
+      "title": "Sequence — Kelola perubahan jadwal",
+      "nodes": [
+        {
+          "id": "6f5f86ba",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 80,
+          "h": 88,
+          "label": "Pelanggan"
+        },
+        {
+          "id": "762c1326",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "b87cc5dc",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "4f2b39a1",
+          "kind": "sync",
+          "from": "6f5f86ba",
+          "to": "762c1326",
+          "label": "ajukanPindahJadwal(kode)",
+          "y": 145
+        },
+        {
+          "id": "efb9b40d",
+          "kind": "sync",
+          "from": "762c1326",
+          "to": "b87cc5dc",
+          "label": "periksaAturanPindah(kode)",
+          "y": 193
+        },
+        {
+          "id": "d546497f",
+          "kind": "sync",
+          "from": "6f5f86ba",
+          "to": "762c1326",
+          "label": "pilihSlotBaru(slot)",
+          "y": 235
+        },
+        {
+          "id": "522e4ebf",
+          "kind": "sync",
+          "from": "762c1326",
+          "to": "b87cc5dc",
+          "label": "simpanPerubahanJadwal(slot)",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "d38f869d"
+      }
+    },
+    {
+      "id": "6b81bb94",
+      "type": "activity",
+      "title": "Activity — Catat booking telepon",
+      "nodes": [
+        {
+          "id": "e8eaa711",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Admin GOR",
+          "role": "actor"
+        },
+        {
+          "id": "91e6443f",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "629b3560",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "afd77519",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 175,
+          "h": 69,
+          "label": "Admin memasukkan data pelanggan dan slot telepon."
+        },
+        {
+          "id": "4e4c8de3",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 164,
+          "h": 52,
+          "label": "Sistem memeriksa ketersediaan lapangan."
+        },
+        {
+          "id": "46c62da0",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 154,
+          "h": 52,
+          "label": "Admin mengonfirmasi rincian booking."
+        },
+        {
+          "id": "d8eb130d",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 161,
+          "h": 69,
+          "label": "Sistem menghitung DP 50% dan tenggat dua jam."
+        },
+        {
+          "id": "633086a4",
+          "kind": "action",
+          "x": 45,
+          "y": 317,
+          "w": 136,
+          "h": 52,
+          "label": "Admin menyimpan booking telepon."
+        },
+        {
+          "id": "2a909b91",
+          "kind": "action",
+          "x": 405,
+          "y": 375,
+          "w": 175,
+          "h": 52,
+          "label": "Sistem membuat booking dan menampilkan kode."
+        },
+        {
+          "id": "b09d2e03",
+          "kind": "decision",
+          "x": 475,
+          "y": 433,
+          "w": 40,
+          "h": 40,
+          "label": "Slot tersedia?"
+        },
+        {
+          "id": "bf972bf7",
+          "kind": "action",
+          "x": 405,
+          "y": 508,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "1a43780a",
+          "kind": "action",
+          "x": 405,
+          "y": 588,
+          "w": 161,
+          "h": 52,
+          "label": "Sistem menolak jadwal yang bentrok."
+        },
+        {
+          "id": "d645ab5e",
+          "kind": "final",
+          "x": 525,
+          "y": 566,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "856cfe46",
+          "kind": "final",
+          "x": 525,
+          "y": 666,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "fbba0d9c",
+          "kind": "flow",
+          "from": "629b3560",
+          "to": "afd77519",
+          "label": ""
+        },
+        {
+          "id": "77ad7c3d",
+          "kind": "flow",
+          "from": "afd77519",
+          "to": "4e4c8de3",
+          "label": ""
+        },
+        {
+          "id": "5bb4a383",
+          "kind": "flow",
+          "from": "4e4c8de3",
+          "to": "46c62da0",
+          "label": ""
+        },
+        {
+          "id": "51bc59b6",
+          "kind": "flow",
+          "from": "46c62da0",
+          "to": "d8eb130d",
+          "label": ""
+        },
+        {
+          "id": "9acd286d",
+          "kind": "flow",
+          "from": "d8eb130d",
+          "to": "633086a4",
+          "label": ""
+        },
+        {
+          "id": "f5736985",
+          "kind": "flow",
+          "from": "633086a4",
+          "to": "2a909b91",
+          "label": ""
+        },
+        {
+          "id": "de06d2a1",
+          "kind": "flow",
+          "from": "2a909b91",
+          "to": "b09d2e03",
+          "label": ""
+        },
+        {
+          "id": "d15134a0",
+          "kind": "flow",
+          "from": "b09d2e03",
+          "to": "bf972bf7",
+          "label": "[YA]"
+        },
+        {
+          "id": "414f5b66",
+          "kind": "flow",
+          "from": "b09d2e03",
+          "to": "1a43780a",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "bed59a22",
+          "kind": "flow",
+          "from": "bf972bf7",
+          "to": "d645ab5e",
+          "label": ""
+        },
+        {
+          "id": "22440642",
+          "kind": "flow",
+          "from": "1a43780a",
+          "to": "856cfe46",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "fad92cdf"
+      }
+    },
+    {
+      "id": "b837bb67",
+      "type": "sequence",
+      "title": "Sequence — Catat booking telepon",
+      "nodes": [
+        {
+          "id": "3bbd4eff",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 87,
+          "h": 88,
+          "label": "Admin GOR"
+        },
+        {
+          "id": "2164a518",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "cc36e53b",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "61235196",
+          "kind": "sync",
+          "from": "3bbd4eff",
+          "to": "2164a518",
+          "label": "catatBookingTelepon(data)",
+          "y": 145
+        },
+        {
+          "id": "011ff594",
+          "kind": "sync",
+          "from": "2164a518",
+          "to": "cc36e53b",
+          "label": "cekBenturanSlot(lapangan,waktu)",
+          "y": 193
+        },
+        {
+          "id": "9dd21b58",
+          "kind": "sync",
+          "from": "3bbd4eff",
+          "to": "2164a518",
+          "label": "konfirmasiRincianBooking()",
+          "y": 235
+        },
+        {
+          "id": "74a7343a",
+          "kind": "sync",
+          "from": "2164a518",
+          "to": "cc36e53b",
+          "label": "hitungDPDanTenggat()",
+          "y": 283
+        },
+        {
+          "id": "d5cd52ef",
+          "kind": "sync",
+          "from": "3bbd4eff",
+          "to": "2164a518",
+          "label": "simpanBookingTelepon()",
+          "y": 325
+        },
+        {
+          "id": "68b3db89",
+          "kind": "sync",
+          "from": "2164a518",
+          "to": "cc36e53b",
+          "label": "simpanBookingTelepon(data)",
+          "y": 373
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "fad92cdf"
+      }
+    },
+    {
+      "id": "41f2c5ef",
+      "type": "activity",
+      "title": "Activity — Verifikasi DP",
+      "nodes": [
+        {
+          "id": "7724abdd",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Admin GOR",
+          "role": "actor"
+        },
+        {
+          "id": "e4a63275",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "65f709f8",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "6f64a73e",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 157,
+          "h": 52,
+          "label": "Admin membuka bukti transfer booking."
+        },
+        {
+          "id": "e7dcf78f",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 176,
+          "h": 52,
+          "label": "Sistem menampilkan bukti dan rincian booking."
+        },
+        {
+          "id": "c09e10d6",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 154,
+          "h": 52,
+          "label": "Admin mengonfirmasi pembayaran DP."
+        },
+        {
+          "id": "a289cb92",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 172,
+          "h": 52,
+          "label": "Sistem mengubah status menjadi terkonfirmasi."
+        },
+        {
+          "id": "d1b47dda",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "Bukti sesuai?"
+        },
+        {
+          "id": "21ff4daa",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "d7747487",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 172,
+          "h": 52,
+          "label": "Admin menindaklanjuti bukti yang belum sesuai."
+        },
+        {
+          "id": "ab753180",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "60fa23ed",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "7b53bdca",
+          "kind": "flow",
+          "from": "65f709f8",
+          "to": "6f64a73e",
+          "label": ""
+        },
+        {
+          "id": "2fd53348",
+          "kind": "flow",
+          "from": "6f64a73e",
+          "to": "e7dcf78f",
+          "label": ""
+        },
+        {
+          "id": "07a0cb8f",
+          "kind": "flow",
+          "from": "e7dcf78f",
+          "to": "c09e10d6",
+          "label": ""
+        },
+        {
+          "id": "8c223543",
+          "kind": "flow",
+          "from": "c09e10d6",
+          "to": "a289cb92",
+          "label": ""
+        },
+        {
+          "id": "17682dfb",
+          "kind": "flow",
+          "from": "a289cb92",
+          "to": "d1b47dda",
+          "label": ""
+        },
+        {
+          "id": "1680852c",
+          "kind": "flow",
+          "from": "d1b47dda",
+          "to": "21ff4daa",
+          "label": "[YA]"
+        },
+        {
+          "id": "cb51a529",
+          "kind": "flow",
+          "from": "d1b47dda",
+          "to": "d7747487",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "66a95378",
+          "kind": "flow",
+          "from": "21ff4daa",
+          "to": "ab753180",
+          "label": ""
+        },
+        {
+          "id": "db2e2ceb",
+          "kind": "flow",
+          "from": "d7747487",
+          "to": "60fa23ed",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "c1d645a7"
+      }
+    },
+    {
+      "id": "b5108d2f",
+      "type": "sequence",
+      "title": "Sequence — Verifikasi DP",
+      "nodes": [
+        {
+          "id": "cebdfb0c",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 87,
+          "h": 88,
+          "label": "Admin GOR"
+        },
+        {
+          "id": "44d6e60a",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "34f2be9b",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "eabced76",
+          "kind": "sync",
+          "from": "cebdfb0c",
+          "to": "44d6e60a",
+          "label": "bukaBuktiTransfer(kode)",
+          "y": 145
+        },
+        {
+          "id": "e7fcc8af",
+          "kind": "sync",
+          "from": "44d6e60a",
+          "to": "34f2be9b",
+          "label": "ambilBuktiDanBooking(kode)",
+          "y": 193
+        },
+        {
+          "id": "7dcf329f",
+          "kind": "sync",
+          "from": "cebdfb0c",
+          "to": "44d6e60a",
+          "label": "konfirmasiDP(kode)",
+          "y": 235
+        },
+        {
+          "id": "6a5bc7de",
+          "kind": "sync",
+          "from": "44d6e60a",
+          "to": "34f2be9b",
+          "label": "ubahStatusTerkonfirmasi(kode)",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "c1d645a7"
+      }
+    },
+    {
+      "id": "772e7c81",
+      "type": "activity",
+      "title": "Activity — Lihat pendapatan dan jam sepi",
+      "nodes": [
+        {
+          "id": "6596031f",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pemilik",
+          "role": "actor"
+        },
+        {
+          "id": "aabc6c6a",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "6468495f",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "3de50aa1",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 166,
+          "h": 52,
+          "label": "Pemilik memilih laporan harian atau bulanan."
+        },
+        {
+          "id": "331e29ae",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 175,
+          "h": 69,
+          "label": "Sistem mengambil data booking dan pembayaran pada periode itu."
+        },
+        {
+          "id": "91991679",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 140,
+          "h": 52,
+          "label": "Pemilik meminta ringkasan jam sepi."
+        },
+        {
+          "id": "ead6ad81",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 143,
+          "h": 69,
+          "label": "Sistem menghitung pendapatan dan pemakaian per jam."
+        },
+        {
+          "id": "708e768f",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "Data tersedia?"
+        },
+        {
+          "id": "1c316b95",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "f7031ebc",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 170,
+          "h": 52,
+          "label": "Sistem menampilkan laporan dengan nilai nol."
+        },
+        {
+          "id": "ad404296",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "bf829a5f",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "e32527e4",
+          "kind": "flow",
+          "from": "6468495f",
+          "to": "3de50aa1",
+          "label": ""
+        },
+        {
+          "id": "84ef8d35",
+          "kind": "flow",
+          "from": "3de50aa1",
+          "to": "331e29ae",
+          "label": ""
+        },
+        {
+          "id": "dff7a8ce",
+          "kind": "flow",
+          "from": "331e29ae",
+          "to": "91991679",
+          "label": ""
+        },
+        {
+          "id": "e81c91b4",
+          "kind": "flow",
+          "from": "91991679",
+          "to": "ead6ad81",
+          "label": ""
+        },
+        {
+          "id": "e10c9a5e",
+          "kind": "flow",
+          "from": "ead6ad81",
+          "to": "708e768f",
+          "label": ""
+        },
+        {
+          "id": "848cd7c6",
+          "kind": "flow",
+          "from": "708e768f",
+          "to": "1c316b95",
+          "label": "[YA]"
+        },
+        {
+          "id": "9fa8a7f1",
+          "kind": "flow",
+          "from": "708e768f",
+          "to": "f7031ebc",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "eb431a90",
+          "kind": "flow",
+          "from": "1c316b95",
+          "to": "ad404296",
+          "label": ""
+        },
+        {
+          "id": "092197e6",
+          "kind": "flow",
+          "from": "f7031ebc",
+          "to": "bf829a5f",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "c36d3222"
+      }
+    },
+    {
+      "id": "06af0f40",
+      "type": "sequence",
+      "title": "Sequence — Lihat pendapatan dan jam sepi",
+      "nodes": [
+        {
+          "id": "a8a55ac2",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 80,
+          "h": 88,
+          "label": "Pemilik"
+        },
+        {
+          "id": "2b45b86f",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "1118bbb1",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "95562e75",
+          "kind": "sync",
+          "from": "a8a55ac2",
+          "to": "2b45b86f",
+          "label": "pilihPeriode(tanggal)",
+          "y": 145
+        },
+        {
+          "id": "702e45d8",
+          "kind": "sync",
+          "from": "2b45b86f",
+          "to": "1118bbb1",
+          "label": "ambilDataPeriode(periode)",
+          "y": 193
+        },
+        {
+          "id": "228fe569",
+          "kind": "sync",
+          "from": "a8a55ac2",
+          "to": "2b45b86f",
+          "label": "mintaRingkasanJamSepi()",
+          "y": 235
+        },
+        {
+          "id": "eab1b974",
+          "kind": "sync",
+          "from": "2b45b86f",
+          "to": "1118bbb1",
+          "label": "hitungPendapatanDanJamSepi()",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "c36d3222"
+      }
+    },
+    {
+      "id": "d01f211a",
+      "type": "activity",
+      "title": "Activity — Batalkan booking tanpa DP",
+      "nodes": [
+        {
+          "id": "902d5e2e",
+          "kind": "lane",
+          "x": 0,
+          "y": 0,
+          "w": 340,
+          "h": 690,
+          "label": "Pemicu waktu",
+          "role": "actor"
+        },
+        {
+          "id": "e757b1da",
+          "kind": "lane",
+          "x": 360,
+          "y": 0,
+          "w": 370,
+          "h": 690,
+          "label": "Sistem",
+          "role": "system"
+        },
+        {
+          "id": "04c7cd09",
+          "kind": "initial",
+          "x": 150,
+          "y": 36,
+          "w": 26,
+          "h": 26,
+          "label": ""
+        },
+        {
+          "id": "7ada7e7e",
+          "kind": "action",
+          "x": 45,
+          "y": 85,
+          "w": 174,
+          "h": 69,
+          "label": "Pemicu waktu memulai pemeriksaan setelah dua jam."
+        },
+        {
+          "id": "f6bacb76",
+          "kind": "action",
+          "x": 405,
+          "y": 143,
+          "w": 174,
+          "h": 52,
+          "label": "Sistem memeriksa status DP booking."
+        },
+        {
+          "id": "92ef01b1",
+          "kind": "action",
+          "x": 45,
+          "y": 201,
+          "w": 178,
+          "h": 69,
+          "label": "Pemicu waktu menyatakan tenggat telah lewat."
+        },
+        {
+          "id": "3c244c45",
+          "kind": "action",
+          "x": 405,
+          "y": 259,
+          "w": 157,
+          "h": 86,
+          "label": "Sistem membatalkan booking yang belum dibayar dan membuka slot."
+        },
+        {
+          "id": "135f335d",
+          "kind": "decision",
+          "x": 475,
+          "y": 317,
+          "w": 40,
+          "h": 40,
+          "label": "DP terverifikasi?"
+        },
+        {
+          "id": "fe819496",
+          "kind": "action",
+          "x": 405,
+          "y": 392,
+          "w": 154,
+          "h": 52,
+          "label": "Proses selesai sesuai aturan"
+        },
+        {
+          "id": "5fec6876",
+          "kind": "action",
+          "x": 405,
+          "y": 472,
+          "w": 173,
+          "h": 69,
+          "label": "Sistem mempertahankan booking sebagai terkonfirmasi."
+        },
+        {
+          "id": "3359e412",
+          "kind": "final",
+          "x": 525,
+          "y": 450,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        },
+        {
+          "id": "f2213bc5",
+          "kind": "final",
+          "x": 525,
+          "y": 550,
+          "w": 28,
+          "h": 28,
+          "label": ""
+        }
+      ],
+      "edges": [
+        {
+          "id": "0ee493cf",
+          "kind": "flow",
+          "from": "04c7cd09",
+          "to": "7ada7e7e",
+          "label": ""
+        },
+        {
+          "id": "73e939b9",
+          "kind": "flow",
+          "from": "7ada7e7e",
+          "to": "f6bacb76",
+          "label": ""
+        },
+        {
+          "id": "35805987",
+          "kind": "flow",
+          "from": "f6bacb76",
+          "to": "92ef01b1",
+          "label": ""
+        },
+        {
+          "id": "f910d0b2",
+          "kind": "flow",
+          "from": "92ef01b1",
+          "to": "3c244c45",
+          "label": ""
+        },
+        {
+          "id": "8445efe9",
+          "kind": "flow",
+          "from": "3c244c45",
+          "to": "135f335d",
+          "label": ""
+        },
+        {
+          "id": "590e5602",
+          "kind": "flow",
+          "from": "135f335d",
+          "to": "fe819496",
+          "label": "[YA]"
+        },
+        {
+          "id": "fd4d93d0",
+          "kind": "flow",
+          "from": "135f335d",
+          "to": "5fec6876",
+          "label": "[TIDAK]"
+        },
+        {
+          "id": "aae56773",
+          "kind": "flow",
+          "from": "fe819496",
+          "to": "3359e412",
+          "label": ""
+        },
+        {
+          "id": "d5ff723a",
+          "kind": "flow",
+          "from": "5fec6876",
+          "to": "f2213bc5",
+          "label": ""
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "444571bb"
+      }
+    },
+    {
+      "id": "8ba42ed7",
+      "type": "sequence",
+      "title": "Sequence — Batalkan booking tanpa DP",
+      "nodes": [
+        {
+          "id": "c18527fa",
+          "kind": "actor",
+          "x": 35,
+          "y": 30,
+          "w": 97,
+          "h": 88,
+          "label": "Pemicu waktu"
+        },
+        {
+          "id": "0a05cea4",
+          "kind": "boundary",
+          "x": 250,
+          "y": 30,
+          "w": 177,
+          "h": 62,
+          "label": "bookingUI : SistemBooking"
+        },
+        {
+          "id": "7c97fd8c",
+          "kind": "control",
+          "x": 525,
+          "y": 30,
+          "w": 213,
+          "h": 62,
+          "label": "bookingLogic : PengelolaBooking"
+        }
+      ],
+      "edges": [
+        {
+          "id": "ce4d3ad6",
+          "kind": "sync",
+          "from": "c18527fa",
+          "to": "0a05cea4",
+          "label": "mulaiPemeriksaanTenggat()",
+          "y": 145
+        },
+        {
+          "id": "edc6b12e",
+          "kind": "sync",
+          "from": "0a05cea4",
+          "to": "7c97fd8c",
+          "label": "bacaStatusDP(kode)",
+          "y": 193
+        },
+        {
+          "id": "5ce9e16f",
+          "kind": "sync",
+          "from": "c18527fa",
+          "to": "0a05cea4",
+          "label": "tenggatDPTerlewati(kode)",
+          "y": 235
+        },
+        {
+          "id": "48b5d08a",
+          "kind": "sync",
+          "from": "0a05cea4",
+          "to": "7c97fd8c",
+          "label": "batalkanBookingDanBukaSlot(kode)",
+          "y": 283
+        }
+      ],
+      "data": {},
+      "settings": {
+        "useCaseId": "444571bb"
+      }
+    }
+  ],
+  "activeId": "afdbd20f"
+}

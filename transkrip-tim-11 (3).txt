@@ -1,0 +1,62 @@
+Transkrip wawancara — Tim 11 (Equinox)
+Klien: Ko Hendra Wijaya, pemilik GOR Smash
+Kasus: Sewa lapangan badminton
+Diekspor dari sistem pada 19/11/2026, 00.40.37
+
+=== Sesi 1 (mulai 2026-11-10 02:16:45 UTC, selesai 2026-11-10 03:05:11 UTC) ===
+
+[P1] Shailenth Deytje Tahulending (2026-11-10 02:16:58 UTC):
+hallo
+
+Ko Hendra Wijaya:
+Halo, selamat. Saya Ko Hendra, pemilik GOR Smash di Manado. Ada yang mau ditanya soal usaha saya?
+
+[P2] Shailenth Deytje Tahulending (2026-11-10 02:17:52 UTC):
+apakah sejauh ini usaha anda ada yang ingin saya dan team saya kembangkan?
+
+Ko Hendra Wijaya:
+Iya, ada beberapa yang mau dikembangkan. Saya mau pelanggan bisa lihat jadwal kosong dan booking sendiri, bisa unggah foto bukti transfer biar admin verifikasi, admin juga bisa catat booking yang telepon, dan saya mau laporan pendapatan per hari dan per bulan. Sekarang masalahnya sering dobel booking karena dua admin pegang HP beda-beda, pelanggan janji transfer DP tapi tidak, dan saya tidak tahu jam mana paling sepi buat promo. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
+
+[P3] Shailenth Deytje Tahulending (2026-11-10 02:20:48 UTC):
+baiklah, biar saya ulangi, jadi secara garis besar yang sangat anda perlukan yaitu sistem yang berisi  pelanggan bisa lihat jadwal kosong dan booking sendiri, bisa unggah foto bukti transfer biar admin verifikasi, admin juga bisa catat booking yang telepon, dan mau laporan pendapatan per hari dan per bulan. Sekarang masalahnya sering dobel booking karena dua admin pegang HP beda-beda, pelanggan janji transfer DP tapi tidak, da tidak tahu jam mana paling sepi buat promo , begitu?
+
+Ko Hendra Wijaya:
+Iya, betul. Itu memang yang saya perlukan. Masalahnya memang sering dobel booking karena dua admin pegang HP berbeda, pelanggan janji transfer DP tapi kadang tidak, dan saya tidak tahu jam mana paling sepi buat promo. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
+
+[P4] Shailenth Deytje Tahulending (2026-11-10 02:31:49 UTC):
+baiklah jadi yang anda inginkan sebuah fitur dimana ada sistem untuk memasukkan booking dan data yang tersimpan akan memberikan alert atau peringatan jika sudah terdouble, juga saya akan membuat fitur dalam sistem untuk melihat seberapa banyak orang orang menyewa lapangan badminton di jam-jam yang sama , agar bisa mengetahui jam2 berapa saat lapangan badminton sepi untuk promo , begitu?
+
+Ko Hendra Wijaya:
+Iya, bagus itu. Tolong pastikan juga admin bisa catat booking yang telepon dan pelanggan bisa unggah bukti transfer supaya verifikasi jelas. Jangan lupa saya mau laporan pendapatan per hari dan per bulan biar tahu juga jam sepi buat promo. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
+
+[P5] Shailenth Deytje Tahulending (2026-11-10 02:33:52 UTC):
+baiklah , akan jadi point bagi kami , ada lagi?
+
+Ko Hendra Wijaya:
+Iya, itu saja. Ingat masalah dobel booking karena dua admin pegang HP, pelanggan sering janji transfer DP tapi tidak, dan saya mau pelanggan bisa lihat jadwal & booking sendiri, unggah bukti transfer, admin catat booking telepon, serta laporan pendapatan harian dan bulanan. Kalau mau rinci, tanya saja satu-satu nanti saya jelaskan. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
+
+[P6] Shailenth Deytje Tahulending (2026-11-10 02:35:10 UTC):
+boleh jelaskan tentang pelanggan sering janji tranfer dp tapi tidak itu bagaimana?
+
+Ko Hendra Wijaya:
+Iya, sering begitu, pelanggan bilang mau transfer DP tapi kadang tidak jadi, jadi lapangan kosong padahal udah dicatet. Aturannya DP 50% harus masuk dalam 2 jam setelah booking, kalau tidak booking-nya batal sendiri. Kalau batal kurang dari 24 jam sebelum main, DP hangus; kalau lebih dari 24 jam, boleh pindah jadwal satu kali.
+
+[P7] Shailenth Deytje Tahulending (2026-11-10 02:36:32 UTC):
+baiklahh
+
+Ko Hendra Wijaya:
+Oke, terima kasih banyak. Kalau mau tahu lebih rinci, tanya saja satu-satu nanti saya jelasin. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
+
+[P8] Shailenth Deytje Tahulending (2026-11-10 02:37:19 UTC):
+Terima kasih akan saya usahakan
+
+Ko Hendra Wijaya:
+Sip, terima kasih banyak. Kalau kalian butuh info lebih rinci nanti tanya saja satu-satu, saya jelaskan. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
+
+=== Sesi 2 (mulai 2026-11-18 16:08:08 UTC) ===
+
+[P1] Shailenth Deytje Tahulending (2026-11-18 16:09:04 UTC):
+baiklah , saya akan mengirimkan link sistem yang sudah saya buat , nanti anda berikan tanggapan kepada saya , apakah anda puas dengan sistem yang sudah saya buat https://zingy-madeleine-aa1c5e.netlify.app
+
+Ko Hendra Wijaya:
+Saya kurang tahu, nanti saya cek dulu linknya. Kalau sudah saya coba, saya kasih tanggapan apakah saya puas atau tidak. Wah, soal teknis itu saya tidak paham, terserah kalian, yang penting pekerjaan saya jadi gampang.
